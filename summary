@@ -1,0 +1,28 @@
+# Trader Performance vs Market Sentiment — Round-0 Assignment
+
+## Setup & How to Run
+1. Clone the repo:
+   git clone <your-repo-link>
+   cd Trader_Performance_vs_Sentiment
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Open notebook:
+   jupyter notebook notebook.ipynb
+4. Run all cells (Kernel → Restart & Run All)
+
+## Methodology
+- Loaded Market Sentiment & Historical Trader Data
+- Cleaned, merged, and aligned datasets by date
+- Created metrics: daily PnL, win rate, trade frequency, avg trade size, long/short ratio, leverage
+
+## Insights
+- Fear days: highest PnL and win rate; Neutral: lowest  
+- Traders trade most during Fear  
+- High-risk traders perform best in Fear but exposed to higher drawdowns  
+- Frequent traders perform best in Greed; Infrequent traders are stable  
+- Consistent traders: stable; Inconsistent traders: volatile in Fear
+
+## Strategy Recommendations
+1. **Sentiment-Aware Leverage Control:** Reduce leverage in Fear & Neutral for high-risk traders, allow higher leverage in Greed  
+2. **Trade Frequency Adjustment:** Enable higher frequency for frequent, consistent traders in Greed; restrict in Fear/Extreme Greed  
+3. **Consistency-Based Risk Management (Optional):** Stricter limits for inconsistent traders in Fear
